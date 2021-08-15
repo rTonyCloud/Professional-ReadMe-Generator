@@ -2,28 +2,20 @@
 const fs = require('fs');
 const path = require("path");
 const inquirer = require("inquirer");
-const choices = require('inquirer/lib/objects/choice');
+const choice = require('inquirer/lib/objects/choice');
 inquirer.registerPrompt("suggest", require("inquirer-prompt-suggest"));
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
 
 // TODO: Create an array of questions for user input
-const questions = readmeGenerator => {
-        console.log(`
-    ============================
-    Add a New Read-Me-Generator!
-    ============================
-    `);
-
-        if (!readmeGenerator.readme) {
-            readmeGenerator.readme = [];
-        }
-        return inquirer.prompt([{
-                type: 'input',
+const questions = [
+            {
+                type: 'suggest',
                 name: 'github',
                 message: "Enter your Github username? (Required)",
-                suggestions: ['na', 'john doe'],
+                default: ['John Doe'],
+                suggestions: ['Rtonycloud'],
                 validate: githubInput => {
                     if (githubInput) {
                         return true;
@@ -34,10 +26,10 @@ const questions = readmeGenerator => {
                 }
             },
             {
-                type: 'input',
+                type: 'suggest',
                 name: 'email',
                 message: "what is your email address? (Required)",
-                suggestion: ['na', 'abc@gmail.com'],
+                default: ['rtonycloud@gmail.com'],
                 validate: emailInput => {
                     if (emailInput) {
                         return true;
@@ -48,10 +40,11 @@ const questions = readmeGenerator => {
                 }
             },
             {
-                type: 'input',
+                type: 'suggest',
                 name: 'title',
                 message: "what is your project's name? (Required)",
-                suggestion: ['na'],
+                default: ['rtonycloud'],
+                suggestions: ['john doe'],
                 validate: descriptionInput => {
                     if (descriptionInput) {
                         return true;
@@ -62,10 +55,10 @@ const questions = readmeGenerator => {
                 }
             },
             {
-                type: 'input',
+                type: 'suggest',
                 name: 'description',
                 message: "Provide a description of the project (Required)",
-                suggestion: ['na'],
+                suggestions: ['na'],
                 validate: descriptionInput => {
                     if (descriptionInput) {
                         return true;
@@ -76,61 +69,68 @@ const questions = readmeGenerator => {
                 }
             },
             {
-                type: 'input',
+                type: 'suggest',
                 name: 'link',
-                message: "Enter the GitHub link to your project. (Required)",
-                suggestion: ['na'],
+                message: "Enter the GitHub link to your live project repo. (Required)",
+                suggestions: ['https://github.io/', 'rTonyCloud.github.io'],
                 validate: linkInput => {
                     if (linkInput) {
                         return true;
                     } else {
-                        console.log('You need to enter a project GitHub link!');
+                        console.log('You need to enter a project git.io live link!');
                         return false;
                     }
                 }
-            },
+            },        
             {
-                type: 'checkbox',
-                name: 'languages',
-                message: "What did you this project with? (Check all that apply)",
-                choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
-            },
-            {
-                type: 'choices',
-                name: 'licenses',
-                message: "Pick a license for this software!",
-                choices: ['MIT', 'Apache', 'GNU', 'OpenBSD'],
-                suggestion: ['MIT'],
-                validate: licensesChoices => {
-                    if (licensesChoices) {
-                        return true;
-                    } else {
-                        console.log('You need to pick a license to proceed!');
-                        return false;
-                    }
-                }
+                type: 'input',
+                name: 'installation',
+                message: "Which command are required to run this application?",
+                sugesstion: ['npm i -y']
             },
             {
                 type: 'input',
-                name: 'contributing',
+                name: 'test',
+                message: "?",
+                default:['npm test']
+                },
+                {
+                type: 'checkbox',
+                name: 'languages',
+                message: "which Technologies and/or Languages did you use? (Check all that apply)",
+                choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node.js']
+            },
+            {
+                type: 'list',
+                name: 'licenses',
+                message: "Pick a license for this software!",
+                choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3.0', 'none'],   
+            },
+            {
+            type: 'input',
+            name: 'test',
+            message: "What does  a user need to know about contributing?",
+            },
+            {
+                type: 'input',
+                name: 'contributors',
                 message: "What does  a user need to know about contributing?",
             },
-        ]);
+        ];
 
-
-
-        // TODO: Create a function to write README file
+       // TODO: Create a function to write README file
         function writeToFile(fileName, data) {
             return fs.writeFileSync(path.join(process.cwd(), fileName), data);
         }
         // TODO: Create a function to initialize app
         function init() {
             inquirer.prompt(questions).then(inquirerResponses => {
-                console.log('readme is working??..')
+                console.log(inquirerResponses);
+                console.log('readme is working??..');
                 writeToFile('README.md', generateMarkdown({...inquirerResponses}));
             });
-            }
         };
 
         // Function call to initialize app
         init();
+
