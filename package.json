@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "inquirer-prompt-suggest": "^0.1.0"
+  }
+}
