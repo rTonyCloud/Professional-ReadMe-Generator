@@ -17,7 +17,7 @@ switch (licenses) {
     break;
   case "n/a":
   default: 
-   return "";
+    return "";
   }
   
 }
@@ -37,9 +37,6 @@ renderLicenseLink = (licenses) => {
 // TODO: Create a function that returns the licenses section of README
 // If there is no licenses, return an empty string
 renderLicenseSection = (licenses) => {
-  if (licenses = 'none') {
-    return 'n/a' }
-  else 
   return `## Licenses  
   This project is licenses under ${licenses} licenses.`
 }
@@ -70,7 +67,10 @@ ${data.installation}
 ## usage
 ${data.usage}
 
-${renderLicenseSection(data.licenses)}
+${renderLicenseSection(data.license)}
+
+## test
+${data.test}
 
 ## languages
 ${data.languages}
@@ -81,7 +81,6 @@ ${data.contributors}
 ## Questions
 If you need to ask me any questions you can contact me at ${data.email}.\n\n you can view more of my work at [github](https://github.com/${data.github})
 `
-
 }
 
 module.exports = generateMarkdown;
