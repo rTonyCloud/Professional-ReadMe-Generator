@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # 	
+=======
+# read me generator
+
+>>>>>>> 49a9ea09c22a2cca833b34f78ea3ec59c920d5cc
   ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
@@ -10,7 +15,7 @@
 * [Questions](#questions)
 
 ## Repo Link
-rTonyCloud.github.io
+https://github.com/rTonyCloud/read-me-generator
 
 ## Description 
 this is a read me generator to automatically generate application content for your github repo
@@ -22,7 +27,11 @@ npm i -y (required Node.js)
 	
 
 ## Licenses  
+<<<<<<< HEAD
   This project is licenses under MIT license.
+=======
+  This project is licenses under MIT licenses.
+>>>>>>> 49a9ea09c22a2cca833b34f78ea3ec59c920d5cc
 
 ## test
 npm test
