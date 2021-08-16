@@ -1,4 +1,4 @@
-# read me generator
+# 	
   ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
@@ -28,12 +28,12 @@ npm i -y (required Node.js)
 npm test
 
 ## languages
-JavaScript
+
 
 ## Contributors
- 
+There are many ways in which anyone could contribute with resolving bugs, tickets and much more. If you have any questions, or concerns, please econtact us under the questions section
 
 ## Questions
 If you need to ask me any questions you can contact me at rtonycloud@gmail.com.
 
- you can view more of my work at [github](https://github.com/Rtonycloud)
+ you can view more of my work at [github](https://github.com/N/A)
