@@ -2,8 +2,10 @@
   ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
-# Video
-https://drive.google.com/file/d/1xSwPOQZAja0c1aID5LOhQxWkJ-SeEDYo/view
+# Video - how to run and install this repo
+https://user-images.githubusercontent.com/85594926/129499339-43ee13d0-0b8a-4ef3-8552-98aca2fc881b.mp4
+
+
 
 # Table of Content
 * [Description](#description)
