@@ -1,7 +1,6 @@
 # read me generator
 
-https://img.shields.io/badge/license-APACHE-red.svg
-  
+  ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
 # Table of Content
@@ -24,7 +23,7 @@ npm i -y (required Node.js)
 install node then run in the terminal node index.js
 
 ## Licenses  
-  This project is licenses under APACHE 2.0 licenses.
+  This project is licenses under MIT licenses.
 
 ## test
 npm test
