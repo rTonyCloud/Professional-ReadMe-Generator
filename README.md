@@ -10,7 +10,7 @@
 * [Questions](#questions)
 
 ## Repo Link
-rTonyCloud.github.io
+https://github.com/rTonyCloud/read-me-generator
 
 ## Description 
 this is a read me generator to automatically generate application content for your github repo
