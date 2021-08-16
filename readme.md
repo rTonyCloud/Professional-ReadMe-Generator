@@ -2,6 +2,9 @@
   ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
+# Video
+
+
 # Table of Content
 * [Description](#description)
 * [Installation](#installation)
@@ -9,8 +12,9 @@
 * [Contributors](#contributors)
 * [Questions](#questions)
 
+
 ## Repo Link
-rTonyCloud.github.io
+https://github.com/rTonyCloud/read-me-generator/blob/main/readme.md
 
 ## Description 
 this is a read me generator to automatically generate application content for your github repo
