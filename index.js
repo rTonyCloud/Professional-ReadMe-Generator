@@ -140,7 +140,7 @@ const questions = [
             },
             {
                 type: 'list',
-                name: 'license',
+                name: 'licenses',
                 message: "Pick a license for this software! (Required):",
                 choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3.0', 'none'],   
                 validate: licenseList => {

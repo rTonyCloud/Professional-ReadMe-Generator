@@ -4,10 +4,10 @@
 renderLicenseBadge = (licenses) => {
 switch (licenses) {
   case "MIT":
-    return `![MIT](https://img.shields.io/badge/license-MIT-red.svg)`;
+    return `![MIT](https://img.shields.io/badge/license-MIT-blue.svg)`;
   break;
   case "APACHE 2.0":
-    return `![APACHE 2.0](https://img.shields.io/badge/license-APACHE-blue.svg)`;
+    return `![APACHE 2.0](https://img.shields.io/badge/license-APACHE-red.svg)`;
     break;
   case "GPL 3.0":
     return `![GPL 3.0](https://img.shields.io/badge/license-GPL%203.0-green.svg)`
@@ -38,7 +38,7 @@ renderLicenseLink = (licenses) => {
 // If there is no licenses, return an empty string
 renderLicenseSection = (licenses) => {
   return `## Licenses  
-  This project is licenses under ${licenses} licenses.`
+  This project is licenses under ${licenses} license.`
 }
 
 
@@ -67,7 +67,7 @@ ${data.installation}
 ## usage
 ${data.usage}
 
-${renderLicenseSection(data.license)}
+${renderLicenseSection(data.licenses)}
 
 ## test
 ${data.test}
