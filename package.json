@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "inquirer": "^8.1.2",
-    "inquirer-prompt-suggest": "^0.1.0"
+    "inquirer-prompt-suggest": "^0.1.0",
+    "install": "^0.13.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
   }
 }

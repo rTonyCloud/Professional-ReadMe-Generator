@@ -34,7 +34,7 @@ install node then run in the terminal node index.js
 npm test
 
 ## languages
-JavaScript,ES6,Node.js
+Solidarity
 
 ## Contributors
 There are many ways in which anyone could contribute with resolving bugs, tickets and much more. If you have any questions, or concerns, please econtact us under the questions section

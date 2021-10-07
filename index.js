@@ -128,7 +128,7 @@ const questions = [
                 type: 'checkbox',
                 name: 'languages',
                 message: "which Technologies and/or Languages did you use? (Check all that apply)",
-                choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node.js'],
+                choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node.js', 'Express', 'Sequilize', 'Mysql', 'MongoDB', 'Solidity', 'Haskell', 'Bcrypt', 'Web3.js'],
                 validate: languageCheckbox => {
                     if (languageCheckbox) {
                         return true;
